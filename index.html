@@ -40,16 +40,20 @@ function ClearValues()
 function calculate()
 {
      try{
-        display.value = eval(display.value);
+        displays.value = eval(displays.value);
     }
     catch(error){
-        display.value = "Error";
+        displays.value = "Error";
     }
 }
 
 function DeleteValue()
 {
-    displays.value = displays.value.slice(0, -1);
+   displays.value = displays.value.slice(0, -1);
+}
+
+function Squareapplied(){
+    displays.value *= displays.value;
 }
 
 </script>
@@ -61,31 +65,33 @@ function DeleteValue()
 
 <body style="background-color:rgba(107, 194, 235, 0.644)">
     <div class="calbuttons" >
-        <input id="displays" readonly type="text" class="Screen" value="0"style="width: 212px; height: 40px; text-align-last: right;">
-        
-        <br>    
+        <input id="displays" readonly type="text" class="Screen" placeholder="0" style="width: 212px; height: 40px; text-align-last: right;">
+        <br> 
+        <input type="button" value="sqr" class="buttons"onclick="Squareapplied()"> 
         <input type="button" value="%" class="buttons" onclick="ValueAppend('%')">
         <input type="button" value="AC" class="buttons" onclick="ClearValues()">
+        <input type="button" value="Del" class="buttons" onclick=" DeleteValue()">
         <br>     
         <input type="button" value="7" class="buttons" onclick="ValueAppend('7')">
         <input type="button" value="8" class="buttons" onclick="ValueAppend('8')">
         <input type="button" value="9" class="buttons" onclick="ValueAppend('9')">
-        <input type="button" value="Del" class="buttons" onclick=" DeleteValue()">
+        <input type="button" value="X" class="buttons" onclick="ValueAppend('*')">
+        
         <br>
         <input type="button" value="4" class="buttons"onclick="ValueAppend('4')">
         <input type="button" value="5" class="buttons" onclick="ValueAppend('5')">
         <input type="button" value="6" class="buttons" onclick="ValueAppend('6')">
-        <input type="button" value="X" class="buttons" onclick="ValueAppend('*')">
+        <input type="button" value="-" class="buttons" onclick="ValueAppend('-')">
         <br>
         <input type="button" value="1" class="buttons" onclick="ValueAppend('1')">
         <input type="button" value="2" class="buttons" onclick="ValueAppend('2')">
         <input type="button" value="3" class="buttons" onclick="ValueAppend('3')">
-        <input type="button" value="-" class="buttons" onclick="ValueAppend('-')">
+        <input type="button" value="+" class="buttons" onclick="ValueAppend('+')">
         <br>
-        <input type="button" value="0" class="buttons" onclick="ValueAppend('0')">
+        <input style="margin-left: 54px;" type="button" value="0" class="buttons" onclick="ValueAppend('0')">
         <input type="button" value="." class="buttons" onclick="ValueAppend('.')">
         <input type="button" value="=" class="buttons" onclick="calculate()">
-         <input type="button" value="+" class="buttons" onclick="ValueAppend('+')">
+        
     </div>
 </body>
 
