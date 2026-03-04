@@ -2,12 +2,17 @@
 <head>
 <title> Online Calculator </title>
 <style>
+
+    @font-face{
+        font-family: anta-regular;
+        src: url(Anta/Anta-Regular.ttf);
+    }
+
 .calbuttons{
 margin-left: auto;
 margin-right: auto;
 display: block;
 flex-wrap: wrap-reverse;
-
 }
 
 .buttons{
@@ -18,17 +23,22 @@ flex-wrap: wrap-reverse;
     border-width: 2px;
     border-radius: 5px;
     margin-block: 1px;
-    
+    font-family: anta-regular;
 }
 
 #displays{
 font-size:xx-large;
+font-family: anta-regular;
 }
 
 #div1{
 border-style: solid;
+border-color: rgb(127, 214, 255);
 width: fit-content;
 height:fit-content;
+margin-left: auto;
+margin-right: auto;
+margin-top: 100px;
 }
 
 </style>
@@ -75,7 +85,7 @@ function Squareapplied(){
 </div>
 
 
-<body style="background-color:rgba(107, 194, 235, 0.644)">
+<body style="background-color:rgba(0, 0, 0, 0.918)">
 <div id="div1">
     <div class="calbuttons" >
         <input id="displays" readonly type="text" class="Screen" placeholder="0" style="width: 372px; height: 140px; text-align-last: right;">
