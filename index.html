@@ -4,22 +4,24 @@
 <style>
 .calbuttons{
 
-width: 212px;
+width: 372px;
 border-width: 3px;
 border-style: solid;
 margin-left: auto;
 margin-right: auto;
-margin-top:350px;
+margin-top:100px;
+
 }
 
 .buttons{
-    width: 50px;
-    height: 50px;
+    width: 90px;
+    height: 90px;
     background-color: antiquewhite;
     border-color:aliceblue;
     border-width: 2px;
     border-radius: 5px;
     margin-block: 1px;
+ 
 }
 
 </style>
@@ -59,13 +61,15 @@ function Squareapplied(){
 </script>
 
 </head>
-
-
+<div style="text-align: center;">
+<h1> Online Calculator </h1>
+<p> Your Online Calculator for your mathematical needs</p>
+</div>
 
 
 <body style="background-color:rgba(107, 194, 235, 0.644)">
     <div class="calbuttons" >
-        <input id="displays" readonly type="text" class="Screen" placeholder="0" style="width: 212px; height: 40px; text-align-last: right;">
+        <input id="displays" readonly type="text" class="Screen" placeholder="0" style="width: 372px; height: 140px; text-align-last: right;">
         <br> 
         <input type="button" value="sqr" class="buttons"onclick="Squareapplied()"> 
         <input type="button" value="%" class="buttons" onclick="ValueAppend('%')">
@@ -88,7 +92,7 @@ function Squareapplied(){
         <input type="button" value="3" class="buttons" onclick="ValueAppend('3')">
         <input type="button" value="+" class="buttons" onclick="ValueAppend('+')">
         <br>
-        <input style="margin-left: 54px;" type="button" value="0" class="buttons" onclick="ValueAppend('0')">
+        <input style="margin-left: 93px;" type="button" value="0" class="buttons" onclick="ValueAppend('0')">
         <input type="button" value="." class="buttons" onclick="ValueAppend('.')">
         <input type="button" value="=" class="buttons" onclick="calculate()">
         
