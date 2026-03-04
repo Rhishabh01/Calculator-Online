@@ -2,26 +2,50 @@
 <head>
 <title> Online Calculator </title>
 <style>
-.calbuttons{
 
-width: 372px;
-border-width: 3px;
-border-style: solid;
+    @font-face{
+        font-family: anta-regular;
+        src: url(Anta/Anta-Regular.ttf);
+    }
+
+.calbuttons{
 margin-left: auto;
 margin-right: auto;
-margin-top:100px;
-
+display: block;
+flex-wrap: wrap-reverse;
+background-color: FFFFFF;
 }
 
 .buttons{
     width: 90px;
     height: 90px;
-    background-color: antiquewhite;
-    border-color:aliceblue;
+    background-color:#E5E7EB;
+    border-color:#E5E7EB;
     border-width: 2px;
     border-radius: 5px;
     margin-block: 1px;
- 
+    margin-left: 2px;
+    margin-right: 2px;
+    font-family: anta-regular;
+    font-size: x-large;
+    color:#1F2937;
+}
+
+#displays{
+font-size:xx-large;
+font-family: anta-regular;
+}
+
+#div1{
+border-style: solid;
+border-color: rgb(127, 214, 255);
+border-width: 10px;
+border-radius: 10px;
+width: fit-content;
+height:fit-content;
+margin-left: auto;
+margin-right: auto;
+margin-top: 100px;
 }
 
 </style>
@@ -32,6 +56,7 @@ const display = document.getElementById("displays");
 function ValueAppend(input)
 {
     displays.value += input;
+    
 }
 
 function ClearValues()
@@ -67,36 +92,40 @@ function Squareapplied(){
 </div>
 
 
-<body style="background-color:rgba(107, 194, 235, 0.644)">
+<body style="background-color:#258073">
+<div id="div1">
     <div class="calbuttons" >
-        <input id="displays" readonly type="text" class="Screen" placeholder="0" style="width: 372px; height: 140px; text-align-last: right;">
+        <input id="displays" readonly type="text" class="Screen" placeholder="0" style="width: 390px; height: 140px; text-align-last: right;">
         <br> 
-        <input type="button" value="sqr" class="buttons"onclick="Squareapplied()"> 
+        <input type="button" value="SQR" class="buttons"onclick="Squareapplied()"> 
         <input type="button" value="%" class="buttons" onclick="ValueAppend('%')">
+        <input type="button" value="DEL" class="buttons" onclick=" DeleteValue()">
         <input type="button" value="AC" class="buttons" onclick="ClearValues()">
-        <input type="button" value="Del" class="buttons" onclick=" DeleteValue()">
         <br>     
         <input type="button" value="7" class="buttons" onclick="ValueAppend('7')">
         <input type="button" value="8" class="buttons" onclick="ValueAppend('8')">
         <input type="button" value="9" class="buttons" onclick="ValueAppend('9')">
-        <input type="button" value="X" class="buttons" onclick="ValueAppend('*')">
+        <input type="button" value="/" class="buttons" onclick="ValueAppend('/')">
         
         <br>
         <input type="button" value="4" class="buttons"onclick="ValueAppend('4')">
         <input type="button" value="5" class="buttons" onclick="ValueAppend('5')">
         <input type="button" value="6" class="buttons" onclick="ValueAppend('6')">
-        <input type="button" value="-" class="buttons" onclick="ValueAppend('-')">
+        <input type="button" value="X" class="buttons" onclick="ValueAppend('*')">
         <br>
         <input type="button" value="1" class="buttons" onclick="ValueAppend('1')">
         <input type="button" value="2" class="buttons" onclick="ValueAppend('2')">
         <input type="button" value="3" class="buttons" onclick="ValueAppend('3')">
-        <input type="button" value="+" class="buttons" onclick="ValueAppend('+')">
+        <input type="button" value="-" class="buttons" onclick="ValueAppend('-')">
         <br>
-        <input style="margin-left: 93px;" type="button" value="0" class="buttons" onclick="ValueAppend('0')">
+        <input type="button" value="0" class="buttons" onclick="ValueAppend('0')">
         <input type="button" value="." class="buttons" onclick="ValueAppend('.')">
         <input type="button" value="=" class="buttons" onclick="calculate()">
+        <input type="button" value="+" class="buttons" onclick="ValueAppend('+')">
+        
         
     </div>
+</div>
 </body>
 
 </html>
