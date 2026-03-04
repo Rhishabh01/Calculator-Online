@@ -29,3 +29,4 @@ function DeleteValue()
 function Squareapplied(){
     displays.value *= displays.value;
 }
+
