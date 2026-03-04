@@ -9,18 +9,26 @@
 <div style="text-align: center;">
 <h1> Online Calculator </h1>
 <p> Your Online Calculator for your mathematical needs</p>
-</div>
+
 
 
 <body style="background-color:#258073">
-    <div id="div2">
+
+<div style="border-style: solid;width:auto;height: auto;float: left; margin-top: 250px; ">
+    
+    <p> <input class="colorwheel" type="color"  onclick="" > BorderColor</p>   
+    <p> <input class="colorwheel" type="color"  onclick="" > PageBackGroundColor</p>
+    <p> <input class="colorwheel" type="color"  onclick="" > TextColor</p>  
+</div>
+<div id="div2">
 <div id="div1">
+    
     <div class="calbuttons" >
         <input id="displays" readonly type="text" class="Screen" placeholder="0">
         <br> 
         <input type="button" value="SQR" class="buttons"onclick="Squareapplied()"> 
         <input type="button" value="%" class="buttons" onclick="ValueAppend('%')">
-        <input type="button" value="DEL" class="buttons" onclick=" DeleteValue()">
+        <input type="button" value="DEL" class="buttons" onclick="DeleteValue()">
         <input type="button" value="AC" class="buttons" onclick="ClearValues()">
         <br>     
         <input type="button" value="7" class="buttons" onclick="ValueAppend('7')">
@@ -43,10 +51,9 @@
         <input type="button" value="." class="buttons" onclick="ValueAppend('.')">
         <input type="button" value="=" class="buttons" onclick="calculate()">
         <input type="button" value="+" class="buttons" onclick="ValueAppend('+')">
-        
-        
     </div>
 </div>
+
 </div>
 </body>
 
