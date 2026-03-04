@@ -13,14 +13,15 @@ margin-left: auto;
 margin-right: auto;
 display: block;
 flex-wrap: wrap-reverse;
-background-color: FFFFFF;
+margin-bottom: 2px;
+
 }
 
 .buttons{
     width: 90px;
     height: 90px;
-    background-color:#E5E7EB;
-    border-color:#E5E7EB;
+    background-color:#3A3F63;
+    border-color:#4f4f50;
     border-width: 2px;
     border-radius: 5px;
     margin-block: 1px;
@@ -28,7 +29,7 @@ background-color: FFFFFF;
     margin-right: 2px;
     font-family: anta-regular;
     font-size: x-large;
-    color:#1F2937;
+    color:#7ef8e8;
 }
 
 #displays{
@@ -36,16 +37,38 @@ font-size:xx-large;
 font-family: anta-regular;
 }
 
+#div2{
+border-color: rgb(0, 0, 0);
+width: fit-content;
+margin-top: 100px;
+margin-left: auto;
+margin-right: auto;
+border-width: 10px;
+border-radius: 25px;
+border-style: solid;
+}
+
 #div1{
 border-style: solid;
-border-color: rgb(127, 214, 255);
+border-color: rgb(255, 147, 105);
 border-width: 10px;
 border-radius: 10px;
 width: fit-content;
 height:fit-content;
 margin-left: auto;
 margin-right: auto;
-margin-top: 100px;
+padding-left: 1px;
+background-color: rgb(255, 147, 105);
+}
+
+.Screen{
+    width: 390px; 
+    height: 140px; 
+    text-align-last: right;
+    border-color: rgb(255, 128, 105);
+    border-width: 15px;
+    margin-bottom: 2px;
+    
 }
 
 </style>
@@ -93,9 +116,10 @@ function Squareapplied(){
 
 
 <body style="background-color:#258073">
+    <div id="div2">
 <div id="div1">
     <div class="calbuttons" >
-        <input id="displays" readonly type="text" class="Screen" placeholder="0" style="width: 390px; height: 140px; text-align-last: right;">
+        <input id="displays" readonly type="text" class="Screen" placeholder="0">
         <br> 
         <input type="button" value="SQR" class="buttons"onclick="Squareapplied()"> 
         <input type="button" value="%" class="buttons" onclick="ValueAppend('%')">
@@ -125,6 +149,7 @@ function Squareapplied(){
         
         
     </div>
+</div>
 </div>
 </body>
 
