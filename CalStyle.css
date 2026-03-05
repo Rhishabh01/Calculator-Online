@@ -19,8 +19,10 @@ margin-bottom: 2px;
 }
 
 .buttons{
-    width: 90px;
-    height: 90px;
+    min-width: 50px;
+    min-height: 50px;
+    max-width: 90px;
+    max-height: 90px;
     background-color:#3A3F63;
     border-width: 5px;
     border-radius: 5px;
@@ -35,7 +37,7 @@ margin-bottom: 2px;
 
 #div2{
 border-color: rgb(0, 0, 0);
-width: fit-content;
+max-width: fit-content;
 margin-left: auto;
 margin-right: auto;
 border-width: 10px;
@@ -49,14 +51,14 @@ border-style: solid;
 border-color: rgb(255, 147, 105);
 border-width: 10px;
 border-radius: 10px;
-width: fit-content;
+max-width: 1000px;
 height:fit-content;
 background-color: rgb(255, 148, 105);
 }
 
 .Screen{
-    width: 400px; 
-    height: 140px; 
+    max-width: 400px; 
+    max-height: 140px; 
     text-align-last: right;
     border-color: rgb(255, 128, 105);
     border-width: 15px;
